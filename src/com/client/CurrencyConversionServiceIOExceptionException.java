@@ -10,7 +10,7 @@ package com.client;
 
 public class CurrencyConversionServiceIOExceptionException extends java.lang.Exception{
 
-    private static final long serialVersionUID = 1614290365508L;
+    private static final long serialVersionUID = 1614358877492L;
     
     private com.client.CurrencyConversionServiceStub.CurrencyConversionServiceIOException faultMessage;
 

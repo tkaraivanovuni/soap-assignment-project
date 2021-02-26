@@ -3,28 +3,33 @@ package com.client;
 import java.rmi.RemoteException;
 
 import com.client.CurrencyConversionServiceStub.CurrenciesHolder;
-import com.client.CurrencyConversionServiceStub.ViewExchangeRate;
-import com.client.CurrencyConversionServiceStub.ViewExchangeRateResponse;
+import com.client.CurrencyConversionServiceStub.DateHolder;
+import com.client.CurrencyConversionServiceStub.ViewExchangeRateOnDate;
+import com.client.CurrencyConversionServiceStub.ViewExchangeRateOnDateResponse;
 
 public class CurrencyConversionClient {
 
 	public static void main(String[] args) throws RemoteException, CurrencyConversionServiceIOExceptionException {
-		
+
 		CurrencyConversionServiceStub stub = new CurrencyConversionServiceStub();
 		
 		CurrenciesHolder currenciesHolder = new CurrenciesHolder();
 		currenciesHolder.setCurrencyToConvert("USD");
 		currenciesHolder.setCurrencyToConvertTo("BGN");
 		
-		CurrenciesHolder[] currencies = new CurrenciesHolder[] {currenciesHolder};
+		DateHolder dateHolder = new DateHolder();
+		dateHolder.setYear(2021);
+		dateHolder.setMonth(2);
+		dateHolder.setDay(15);
 		
-		ViewExchangeRate request = new ViewExchangeRate();
-		request.setRequestedCurrencies(currencies);
+		ViewExchangeRateOnDate request = new ViewExchangeRateOnDate();
+		request.setRequestedCurrencies(currenciesHolder);
+		request.setDate(dateHolder);
 		
-		ViewExchangeRateResponse response = stub.viewExchangeRate(request);
+		ViewExchangeRateOnDateResponse response = stub.viewExchangeRateOnDate(request);
 		
-		System.out.println(response);
-
+		System.out.println(response.get_return());
+		
 	}
 
 }

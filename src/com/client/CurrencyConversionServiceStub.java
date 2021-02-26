@@ -142,7 +142,7 @@ import com.server.CurrencyConversionService;
      */
     public CurrencyConversionServiceStub(org.apache.axis2.context.ConfigurationContext configurationContext) throws org.apache.axis2.AxisFault {
         
-                    this(configurationContext,"http://localhost:9080/assignment-soap/services/CurrencyConversionService.CurrencyConversionServiceHttpSoap12Endpoint/" );
+                    this(configurationContext,"http://localhost:9080/soap-assignment/services/CurrencyConversionService.CurrencyConversionServiceHttpSoap12Endpoint/" );
                 
     }
 
@@ -151,7 +151,7 @@ import com.server.CurrencyConversionService;
      */
     public CurrencyConversionServiceStub() throws org.apache.axis2.AxisFault {
         
-                    this("http://localhost:9080/assignment-soap/services/CurrencyConversionService.CurrencyConversionServiceHttpSoap12Endpoint/" );
+                    this("http://localhost:9080/soap-assignment/services/CurrencyConversionService.CurrencyConversionServiceHttpSoap12Endpoint/" );
                 
     }
 
@@ -580,14 +580,14 @@ import com.server.CurrencyConversionService;
         }
         return false;
     }
-     //http://localhost:9080/assignment-soap/services/CurrencyConversionService.CurrencyConversionServiceHttpSoap12Endpoint/
+     //http://localhost:9080/soap-assignment/services/CurrencyConversionService.CurrencyConversionServiceHttpSoap12Endpoint/
         public static class ViewExchangeRateOnDateResponse
         implements org.apache.axis2.databinding.ADBBean{
         
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://server.com",
                 "viewExchangeRateOnDateResponse",
-                "ns4");
+                "ns3");
 
             
 
@@ -717,7 +717,7 @@ import com.server.CurrencyConversionService;
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://server.com")){
-                return "ns4";
+                return "ns3";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -1034,7 +1034,7 @@ import com.server.CurrencyConversionService;
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://server.com",
                 "viewExchangeRateOnDate",
-                "ns4");
+                "ns3");
 
             
 
@@ -1085,7 +1085,7 @@ import com.server.CurrencyConversionService;
                         */
 
                         
-                                    protected LocalDate localDate ;
+                                    protected DateHolder localDate ;
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
                           *   for this attribute. It will be used to determine whether to include this field
@@ -1101,9 +1101,9 @@ import com.server.CurrencyConversionService;
 
                            /**
                            * Auto generated getter method
-                           * @return LocalDate
+                           * @return DateHolder
                            */
-                           public  LocalDate getDate(){
+                           public  DateHolder getDate(){
                                return localDate;
                            }
 
@@ -1113,7 +1113,7 @@ import com.server.CurrencyConversionService;
                                * Auto generated setter method
                                * @param param Date
                                */
-                               public void setDate(LocalDate param){
+                               public void setDate(DateHolder param){
                             localDateTracker = true;
                                    
                                             this.localDate=param;
@@ -1212,7 +1212,7 @@ import com.server.CurrencyConversionService;
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://server.com")){
-                return "ns4";
+                return "ns3";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -1517,7 +1517,7 @@ import com.server.CurrencyConversionService;
                                           
                                       }else{
                                     
-                                                object.setDate(LocalDate.Factory.parse(reader));
+                                                object.setDate(DateHolder.Factory.parse(reader));
                                               
                                         reader.next();
                                     }
@@ -1527,1686 +1527,6 @@ import com.server.CurrencyConversionService;
                                         
                                     }
                                   
-                            while (!reader.isStartElement() && !reader.isEndElement())
-                                reader.next();
-                            
-                                if (reader.isStartElement())
-                                // A start element we are not expecting indicates a trailing invalid property
-                                throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
-                            
-
-
-
-            } catch (javax.xml.stream.XMLStreamException e) {
-                throw new java.lang.Exception(e);
-            }
-
-            return object;
-        }
-
-        }//end of factory class
-
-        
-
-        }
-           
-    
-        public static class Era
-        implements org.apache.axis2.databinding.ADBBean{
-        /* This type was generated from the piece of schema that had
-                name = Era
-                Namespace URI = http://chrono.time.java/xsd
-                Namespace Prefix = ns5
-                */
-            
-
-                        /**
-                        * field for Value
-                        */
-
-                        
-                                    protected int localValue ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean localValueTracker = false ;
-
-                           public boolean isValueSpecified(){
-                               return localValueTracker;
-                           }
-
-                           
-
-                           /**
-                           * Auto generated getter method
-                           * @return int
-                           */
-                           public  int getValue(){
-                               return localValue;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param Value
-                               */
-                               public void setValue(int param){
-                            
-                                       // setting primitive attribute tracker to true
-                                       localValueTracker =
-                                       param != java.lang.Integer.MIN_VALUE;
-                                   
-                                            this.localValue=param;
-                                       
-
-                               }
-                            
-
-     
-     
-        /**
-        *
-        * @param parentQName
-        * @param factory
-        * @return org.apache.axiom.om.OMElement
-        */
-       public org.apache.axiom.om.OMElement getOMElement (
-               final javax.xml.namespace.QName parentQName,
-               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
-
-
-        
-               org.apache.axiom.om.OMDataSource dataSource =
-                       new org.apache.axis2.databinding.ADBDataSource(this,parentQName);
-               return factory.createOMElement(dataSource,parentQName);
-            
-        }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter)
-                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-                           serialize(parentQName,xmlWriter,false);
-         }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                               javax.xml.stream.XMLStreamWriter xmlWriter,
-                               boolean serializeType)
-            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-            
-                
-
-
-                java.lang.String prefix = null;
-                java.lang.String namespace = null;
-                
-
-                    prefix = parentQName.getPrefix();
-                    namespace = parentQName.getNamespaceURI();
-                    writeStartElement(prefix, namespace, parentQName.getLocalPart(), xmlWriter);
-                
-                  if (serializeType){
-               
-
-                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://chrono.time.java/xsd");
-                   if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
-                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           namespacePrefix+":Era",
-                           xmlWriter);
-                   } else {
-                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           "Era",
-                           xmlWriter);
-                   }
-
-               
-                   }
-                if (localValueTracker){
-                                    namespace = "http://chrono.time.java/xsd";
-                                    writeStartElement(null, namespace, "value", xmlWriter);
-                             
-                                               if (localValue==java.lang.Integer.MIN_VALUE) {
-                                           
-                                                         throw new org.apache.axis2.databinding.ADBException("value cannot be null!!");
-                                                      
-                                               } else {
-                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localValue));
-                                               }
-                                    
-                                   xmlWriter.writeEndElement();
-                             }
-                    xmlWriter.writeEndElement();
-               
-
-        }
-
-        private static java.lang.String generatePrefix(java.lang.String namespace) {
-            if(namespace.equals("http://chrono.time.java/xsd")){
-                return "ns5";
-            }
-            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-        }
-
-        /**
-         * Utility method to write an element start tag.
-         */
-        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
-            if (writerPrefix != null) {
-                xmlWriter.writeStartElement(namespace, localPart);
-            } else {
-                if (namespace.length() == 0) {
-                    prefix = "";
-                } else if (prefix == null) {
-                    prefix = generatePrefix(namespace);
-                }
-
-                xmlWriter.writeStartElement(prefix, localPart, namespace);
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-        }
-        
-        /**
-         * Util method to write an attribute with the ns prefix
-         */
-        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (xmlWriter.getPrefix(namespace) == null) {
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            xmlWriter.writeAttribute(namespace,attName,attValue);
-        }
-
-        /**
-         * Util method to write an attribute without the ns prefix
-         */
-        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (namespace.equals("")) {
-                xmlWriter.writeAttribute(attName,attValue);
-            } else {
-                registerPrefix(xmlWriter, namespace);
-                xmlWriter.writeAttribute(namespace,attName,attValue);
-            }
-        }
-
-
-           /**
-             * Util method to write an attribute without the ns prefix
-             */
-            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
-                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-                java.lang.String attributeNamespace = qname.getNamespaceURI();
-                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
-                if (attributePrefix == null) {
-                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
-                }
-                java.lang.String attributeValue;
-                if (attributePrefix.trim().length() > 0) {
-                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
-                } else {
-                    attributeValue = qname.getLocalPart();
-                }
-
-                if (namespace.equals("")) {
-                    xmlWriter.writeAttribute(attName, attributeValue);
-                } else {
-                    registerPrefix(xmlWriter, namespace);
-                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
-                }
-            }
-        /**
-         *  method to handle Qnames
-         */
-
-        private void writeQName(javax.xml.namespace.QName qname,
-                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String namespaceURI = qname.getNamespaceURI();
-            if (namespaceURI != null) {
-                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
-                if (prefix == null) {
-                    prefix = generatePrefix(namespaceURI);
-                    xmlWriter.writeNamespace(prefix, namespaceURI);
-                    xmlWriter.setPrefix(prefix,namespaceURI);
-                }
-
-                if (prefix.trim().length() > 0){
-                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                } else {
-                    // i.e this is the default namespace
-                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                }
-
-            } else {
-                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-            }
-        }
-
-        private void writeQNames(javax.xml.namespace.QName[] qnames,
-                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-            if (qnames != null) {
-                // we have to store this data until last moment since it is not possible to write any
-                // namespace data after writing the charactor data
-                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
-                java.lang.String namespaceURI = null;
-                java.lang.String prefix = null;
-
-                for (int i = 0; i < qnames.length; i++) {
-                    if (i > 0) {
-                        stringToWrite.append(" ");
-                    }
-                    namespaceURI = qnames[i].getNamespaceURI();
-                    if (namespaceURI != null) {
-                        prefix = xmlWriter.getPrefix(namespaceURI);
-                        if ((prefix == null) || (prefix.length() == 0)) {
-                            prefix = generatePrefix(namespaceURI);
-                            xmlWriter.writeNamespace(prefix, namespaceURI);
-                            xmlWriter.setPrefix(prefix,namespaceURI);
-                        }
-
-                        if (prefix.trim().length() > 0){
-                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        } else {
-                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        }
-                    } else {
-                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                    }
-                }
-                xmlWriter.writeCharacters(stringToWrite.toString());
-            }
-
-        }
-
-
-        /**
-         * Register a namespace prefix
-         */
-        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
-            java.lang.String prefix = xmlWriter.getPrefix(namespace);
-            if (prefix == null) {
-                prefix = generatePrefix(namespace);
-                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
-                while (true) {
-                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
-                    if (uri == null || uri.length() == 0) {
-                        break;
-                    }
-                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-                }
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            return prefix;
-        }
-
-
-  
-        /**
-        * databinding method to get an XML representation of this object
-        *
-        */
-        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
-                    throws org.apache.axis2.databinding.ADBException{
-
-
-        
-                 java.util.ArrayList elementList = new java.util.ArrayList();
-                 java.util.ArrayList attribList = new java.util.ArrayList();
-
-                 if (localValueTracker){
-                                      elementList.add(new javax.xml.namespace.QName("http://chrono.time.java/xsd",
-                                                                      "value"));
-                                 
-                                elementList.add(
-                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localValue));
-                            }
-
-                return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(), attribList.toArray());
-            
-            
-
-        }
-
-  
-
-     /**
-      *  Factory class that keeps the parse method
-      */
-    public static class Factory{
-
-        
-        
-
-        /**
-        * static method to create the object
-        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
-        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
-        * Postcondition: If this object is an element, the reader is positioned at its end element
-        *                If this object is a complex type, the reader is positioned at the end element of its outer element
-        */
-        public static Era parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            Era object =
-                new Era();
-
-            int event;
-            java.lang.String nillableValue = null;
-            java.lang.String prefix ="";
-            java.lang.String namespaceuri ="";
-            try {
-                
-                while (!reader.isStartElement() && !reader.isEndElement())
-                    reader.next();
-
-                
-                if (reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","type")!=null){
-                  java.lang.String fullTypeName = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance",
-                        "type");
-                  if (fullTypeName!=null){
-                    java.lang.String nsPrefix = null;
-                    if (fullTypeName.indexOf(":") > -1){
-                        nsPrefix = fullTypeName.substring(0,fullTypeName.indexOf(":"));
-                    }
-                    nsPrefix = nsPrefix==null?"":nsPrefix;
-
-                    java.lang.String type = fullTypeName.substring(fullTypeName.indexOf(":")+1);
-                    
-                            if (!"Era".equals(type)){
-                                //find namespace for the prefix
-                                java.lang.String nsUri = reader.getNamespaceContext().getNamespaceURI(nsPrefix);
-                                return (Era)ExtensionMapper.getTypeObject(
-                                     nsUri,type,reader);
-                              }
-                        
-
-                  }
-                
-
-                }
-
-                
-
-                
-                // Note all attributes that were handled. Used to differ normal attributes
-                // from anyAttributes.
-                java.util.Vector handledAttributes = new java.util.Vector();
-                
-
-                
-                    
-                    reader.next();
-                
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-                                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://chrono.time.java/xsd","value").equals(reader.getName())){
-                                
-                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"value" +"  cannot be null");
-                                    }
-                                    
-
-                                    java.lang.String content = reader.getElementText();
-                                    
-                                              object.setValue(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(content));
-                                              
-                                        reader.next();
-                                    
-                              }  // End of if for expected property start element
-                                
-                                    else {
-                                        
-                                               object.setValue(java.lang.Integer.MIN_VALUE);
-                                           
-                                    }
-                                  
-                            while (!reader.isStartElement() && !reader.isEndElement())
-                                reader.next();
-                            
-                                if (reader.isStartElement())
-                                // A start element we are not expecting indicates a trailing invalid property
-                                throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
-                            
-
-
-
-            } catch (javax.xml.stream.XMLStreamException e) {
-                throw new java.lang.Exception(e);
-            }
-
-            return object;
-        }
-
-        }//end of factory class
-
-        
-
-        }
-           
-    
-        public static class ExtensionMapper{
-
-          public static java.lang.Object getTypeObject(java.lang.String namespaceURI,
-                                                       java.lang.String typeName,
-                                                       javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-
-              
-                  if (
-                  "http://server.com/xsd".equals(namespaceURI) &&
-                  "CurrenciesHolder".equals(typeName)){
-                   
-                            return  CurrenciesHolder.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://chrono.time.java/xsd".equals(namespaceURI) &&
-                  "Era".equals(typeName)){
-                   
-                            return  Era.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://time.java/xsd".equals(namespaceURI) &&
-                  "LocalDate".equals(typeName)){
-                   
-                            return  LocalDate.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://chrono.time.java/xsd".equals(namespaceURI) &&
-                  "AbstractChronology".equals(typeName)){
-                   
-                            return  AbstractChronology.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://time.java/xsd".equals(namespaceURI) &&
-                  "DayOfWeek".equals(typeName)){
-                   
-                            return  DayOfWeek.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://time.java/xsd".equals(namespaceURI) &&
-                  "Month".equals(typeName)){
-                   
-                            return  Month.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://io.java/xsd".equals(namespaceURI) &&
-                  "IOException".equals(typeName)){
-                   
-                            return  IOException.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://chrono.time.java/xsd".equals(namespaceURI) &&
-                  "IsoChronology".equals(typeName)){
-                   
-                            return  IsoChronology.Factory.parse(reader);
-                        
-
-                  }
-
-              
-             throw new org.apache.axis2.databinding.ADBException("Unsupported type " + namespaceURI + " " + typeName);
-          }
-
-        }
-    
-        public static class AbstractChronology
-        implements org.apache.axis2.databinding.ADBBean{
-        /* This type was generated from the piece of schema that had
-                name = AbstractChronology
-                Namespace URI = http://chrono.time.java/xsd
-                Namespace Prefix = ns5
-                */
-            
-
-     
-     
-        /**
-        *
-        * @param parentQName
-        * @param factory
-        * @return org.apache.axiom.om.OMElement
-        */
-       public org.apache.axiom.om.OMElement getOMElement (
-               final javax.xml.namespace.QName parentQName,
-               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
-
-
-        
-               org.apache.axiom.om.OMDataSource dataSource =
-                       new org.apache.axis2.databinding.ADBDataSource(this,parentQName);
-               return factory.createOMElement(dataSource,parentQName);
-            
-        }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter)
-                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-                           serialize(parentQName,xmlWriter,false);
-         }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                               javax.xml.stream.XMLStreamWriter xmlWriter,
-                               boolean serializeType)
-            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-            
-                
-
-
-                java.lang.String prefix = null;
-                java.lang.String namespace = null;
-                
-
-                    prefix = parentQName.getPrefix();
-                    namespace = parentQName.getNamespaceURI();
-                    writeStartElement(prefix, namespace, parentQName.getLocalPart(), xmlWriter);
-                
-                  if (serializeType){
-               
-
-                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://chrono.time.java/xsd");
-                   if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
-                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           namespacePrefix+":AbstractChronology",
-                           xmlWriter);
-                   } else {
-                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           "AbstractChronology",
-                           xmlWriter);
-                   }
-
-               
-                   }
-               
-                    xmlWriter.writeEndElement();
-               
-
-        }
-
-        private static java.lang.String generatePrefix(java.lang.String namespace) {
-            if(namespace.equals("http://chrono.time.java/xsd")){
-                return "ns5";
-            }
-            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-        }
-
-        /**
-         * Utility method to write an element start tag.
-         */
-        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
-            if (writerPrefix != null) {
-                xmlWriter.writeStartElement(namespace, localPart);
-            } else {
-                if (namespace.length() == 0) {
-                    prefix = "";
-                } else if (prefix == null) {
-                    prefix = generatePrefix(namespace);
-                }
-
-                xmlWriter.writeStartElement(prefix, localPart, namespace);
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-        }
-        
-        /**
-         * Util method to write an attribute with the ns prefix
-         */
-        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (xmlWriter.getPrefix(namespace) == null) {
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            xmlWriter.writeAttribute(namespace,attName,attValue);
-        }
-
-        /**
-         * Util method to write an attribute without the ns prefix
-         */
-        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (namespace.equals("")) {
-                xmlWriter.writeAttribute(attName,attValue);
-            } else {
-                registerPrefix(xmlWriter, namespace);
-                xmlWriter.writeAttribute(namespace,attName,attValue);
-            }
-        }
-
-
-           /**
-             * Util method to write an attribute without the ns prefix
-             */
-            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
-                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-                java.lang.String attributeNamespace = qname.getNamespaceURI();
-                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
-                if (attributePrefix == null) {
-                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
-                }
-                java.lang.String attributeValue;
-                if (attributePrefix.trim().length() > 0) {
-                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
-                } else {
-                    attributeValue = qname.getLocalPart();
-                }
-
-                if (namespace.equals("")) {
-                    xmlWriter.writeAttribute(attName, attributeValue);
-                } else {
-                    registerPrefix(xmlWriter, namespace);
-                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
-                }
-            }
-        /**
-         *  method to handle Qnames
-         */
-
-        private void writeQName(javax.xml.namespace.QName qname,
-                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String namespaceURI = qname.getNamespaceURI();
-            if (namespaceURI != null) {
-                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
-                if (prefix == null) {
-                    prefix = generatePrefix(namespaceURI);
-                    xmlWriter.writeNamespace(prefix, namespaceURI);
-                    xmlWriter.setPrefix(prefix,namespaceURI);
-                }
-
-                if (prefix.trim().length() > 0){
-                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                } else {
-                    // i.e this is the default namespace
-                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                }
-
-            } else {
-                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-            }
-        }
-
-        private void writeQNames(javax.xml.namespace.QName[] qnames,
-                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-            if (qnames != null) {
-                // we have to store this data until last moment since it is not possible to write any
-                // namespace data after writing the charactor data
-                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
-                java.lang.String namespaceURI = null;
-                java.lang.String prefix = null;
-
-                for (int i = 0; i < qnames.length; i++) {
-                    if (i > 0) {
-                        stringToWrite.append(" ");
-                    }
-                    namespaceURI = qnames[i].getNamespaceURI();
-                    if (namespaceURI != null) {
-                        prefix = xmlWriter.getPrefix(namespaceURI);
-                        if ((prefix == null) || (prefix.length() == 0)) {
-                            prefix = generatePrefix(namespaceURI);
-                            xmlWriter.writeNamespace(prefix, namespaceURI);
-                            xmlWriter.setPrefix(prefix,namespaceURI);
-                        }
-
-                        if (prefix.trim().length() > 0){
-                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        } else {
-                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        }
-                    } else {
-                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                    }
-                }
-                xmlWriter.writeCharacters(stringToWrite.toString());
-            }
-
-        }
-
-
-        /**
-         * Register a namespace prefix
-         */
-        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
-            java.lang.String prefix = xmlWriter.getPrefix(namespace);
-            if (prefix == null) {
-                prefix = generatePrefix(namespace);
-                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
-                while (true) {
-                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
-                    if (uri == null || uri.length() == 0) {
-                        break;
-                    }
-                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-                }
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            return prefix;
-        }
-
-
-  
-        /**
-        * databinding method to get an XML representation of this object
-        *
-        */
-        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
-                    throws org.apache.axis2.databinding.ADBException{
-
-
-        
-                 java.util.ArrayList elementList = new java.util.ArrayList();
-                 java.util.ArrayList attribList = new java.util.ArrayList();
-
-                
-
-                return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(), attribList.toArray());
-            
-            
-
-        }
-
-  
-
-     /**
-      *  Factory class that keeps the parse method
-      */
-    public static class Factory{
-
-        
-        
-
-        /**
-        * static method to create the object
-        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
-        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
-        * Postcondition: If this object is an element, the reader is positioned at its end element
-        *                If this object is a complex type, the reader is positioned at the end element of its outer element
-        */
-        public static AbstractChronology parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            AbstractChronology object =
-                new AbstractChronology();
-
-            int event;
-            java.lang.String nillableValue = null;
-            java.lang.String prefix ="";
-            java.lang.String namespaceuri ="";
-            try {
-                
-                while (!reader.isStartElement() && !reader.isEndElement())
-                    reader.next();
-
-                
-                if (reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","type")!=null){
-                  java.lang.String fullTypeName = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance",
-                        "type");
-                  if (fullTypeName!=null){
-                    java.lang.String nsPrefix = null;
-                    if (fullTypeName.indexOf(":") > -1){
-                        nsPrefix = fullTypeName.substring(0,fullTypeName.indexOf(":"));
-                    }
-                    nsPrefix = nsPrefix==null?"":nsPrefix;
-
-                    java.lang.String type = fullTypeName.substring(fullTypeName.indexOf(":")+1);
-                    
-                            if (!"AbstractChronology".equals(type)){
-                                //find namespace for the prefix
-                                java.lang.String nsUri = reader.getNamespaceContext().getNamespaceURI(nsPrefix);
-                                return (AbstractChronology)ExtensionMapper.getTypeObject(
-                                     nsUri,type,reader);
-                              }
-                        
-
-                  }
-                
-
-                }
-
-                
-
-                
-                // Note all attributes that were handled. Used to differ normal attributes
-                // from anyAttributes.
-                java.util.Vector handledAttributes = new java.util.Vector();
-                
-
-                
-                    
-                    reader.next();
-                  
-                            while (!reader.isStartElement() && !reader.isEndElement())
-                                reader.next();
-                            
-                                if (reader.isStartElement())
-                                // A start element we are not expecting indicates a trailing invalid property
-                                throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
-                            
-
-
-
-            } catch (javax.xml.stream.XMLStreamException e) {
-                throw new java.lang.Exception(e);
-            }
-
-            return object;
-        }
-
-        }//end of factory class
-
-        
-
-        }
-           
-    
-        public static class Month
-        implements org.apache.axis2.databinding.ADBBean{
-        /* This type was generated from the piece of schema that had
-                name = Month
-                Namespace URI = http://time.java/xsd
-                Namespace Prefix = ns6
-                */
-            
-
-                        /**
-                        * field for Value
-                        */
-
-                        
-                                    protected int localValue ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean localValueTracker = false ;
-
-                           public boolean isValueSpecified(){
-                               return localValueTracker;
-                           }
-
-                           
-
-                           /**
-                           * Auto generated getter method
-                           * @return int
-                           */
-                           public  int getValue(){
-                               return localValue;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param Value
-                               */
-                               public void setValue(int param){
-                            
-                                       // setting primitive attribute tracker to true
-                                       localValueTracker =
-                                       param != java.lang.Integer.MIN_VALUE;
-                                   
-                                            this.localValue=param;
-                                       
-
-                               }
-                            
-
-     
-     
-        /**
-        *
-        * @param parentQName
-        * @param factory
-        * @return org.apache.axiom.om.OMElement
-        */
-       public org.apache.axiom.om.OMElement getOMElement (
-               final javax.xml.namespace.QName parentQName,
-               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
-
-
-        
-               org.apache.axiom.om.OMDataSource dataSource =
-                       new org.apache.axis2.databinding.ADBDataSource(this,parentQName);
-               return factory.createOMElement(dataSource,parentQName);
-            
-        }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter)
-                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-                           serialize(parentQName,xmlWriter,false);
-         }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                               javax.xml.stream.XMLStreamWriter xmlWriter,
-                               boolean serializeType)
-            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-            
-                
-
-
-                java.lang.String prefix = null;
-                java.lang.String namespace = null;
-                
-
-                    prefix = parentQName.getPrefix();
-                    namespace = parentQName.getNamespaceURI();
-                    writeStartElement(prefix, namespace, parentQName.getLocalPart(), xmlWriter);
-                
-                  if (serializeType){
-               
-
-                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://time.java/xsd");
-                   if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
-                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           namespacePrefix+":Month",
-                           xmlWriter);
-                   } else {
-                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           "Month",
-                           xmlWriter);
-                   }
-
-               
-                   }
-                if (localValueTracker){
-                                    namespace = "http://time.java/xsd";
-                                    writeStartElement(null, namespace, "value", xmlWriter);
-                             
-                                               if (localValue==java.lang.Integer.MIN_VALUE) {
-                                           
-                                                         throw new org.apache.axis2.databinding.ADBException("value cannot be null!!");
-                                                      
-                                               } else {
-                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localValue));
-                                               }
-                                    
-                                   xmlWriter.writeEndElement();
-                             }
-                    xmlWriter.writeEndElement();
-               
-
-        }
-
-        private static java.lang.String generatePrefix(java.lang.String namespace) {
-            if(namespace.equals("http://time.java/xsd")){
-                return "ns6";
-            }
-            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-        }
-
-        /**
-         * Utility method to write an element start tag.
-         */
-        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
-            if (writerPrefix != null) {
-                xmlWriter.writeStartElement(namespace, localPart);
-            } else {
-                if (namespace.length() == 0) {
-                    prefix = "";
-                } else if (prefix == null) {
-                    prefix = generatePrefix(namespace);
-                }
-
-                xmlWriter.writeStartElement(prefix, localPart, namespace);
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-        }
-        
-        /**
-         * Util method to write an attribute with the ns prefix
-         */
-        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (xmlWriter.getPrefix(namespace) == null) {
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            xmlWriter.writeAttribute(namespace,attName,attValue);
-        }
-
-        /**
-         * Util method to write an attribute without the ns prefix
-         */
-        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (namespace.equals("")) {
-                xmlWriter.writeAttribute(attName,attValue);
-            } else {
-                registerPrefix(xmlWriter, namespace);
-                xmlWriter.writeAttribute(namespace,attName,attValue);
-            }
-        }
-
-
-           /**
-             * Util method to write an attribute without the ns prefix
-             */
-            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
-                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-                java.lang.String attributeNamespace = qname.getNamespaceURI();
-                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
-                if (attributePrefix == null) {
-                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
-                }
-                java.lang.String attributeValue;
-                if (attributePrefix.trim().length() > 0) {
-                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
-                } else {
-                    attributeValue = qname.getLocalPart();
-                }
-
-                if (namespace.equals("")) {
-                    xmlWriter.writeAttribute(attName, attributeValue);
-                } else {
-                    registerPrefix(xmlWriter, namespace);
-                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
-                }
-            }
-        /**
-         *  method to handle Qnames
-         */
-
-        private void writeQName(javax.xml.namespace.QName qname,
-                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String namespaceURI = qname.getNamespaceURI();
-            if (namespaceURI != null) {
-                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
-                if (prefix == null) {
-                    prefix = generatePrefix(namespaceURI);
-                    xmlWriter.writeNamespace(prefix, namespaceURI);
-                    xmlWriter.setPrefix(prefix,namespaceURI);
-                }
-
-                if (prefix.trim().length() > 0){
-                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                } else {
-                    // i.e this is the default namespace
-                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                }
-
-            } else {
-                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-            }
-        }
-
-        private void writeQNames(javax.xml.namespace.QName[] qnames,
-                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-            if (qnames != null) {
-                // we have to store this data until last moment since it is not possible to write any
-                // namespace data after writing the charactor data
-                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
-                java.lang.String namespaceURI = null;
-                java.lang.String prefix = null;
-
-                for (int i = 0; i < qnames.length; i++) {
-                    if (i > 0) {
-                        stringToWrite.append(" ");
-                    }
-                    namespaceURI = qnames[i].getNamespaceURI();
-                    if (namespaceURI != null) {
-                        prefix = xmlWriter.getPrefix(namespaceURI);
-                        if ((prefix == null) || (prefix.length() == 0)) {
-                            prefix = generatePrefix(namespaceURI);
-                            xmlWriter.writeNamespace(prefix, namespaceURI);
-                            xmlWriter.setPrefix(prefix,namespaceURI);
-                        }
-
-                        if (prefix.trim().length() > 0){
-                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        } else {
-                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        }
-                    } else {
-                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                    }
-                }
-                xmlWriter.writeCharacters(stringToWrite.toString());
-            }
-
-        }
-
-
-        /**
-         * Register a namespace prefix
-         */
-        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
-            java.lang.String prefix = xmlWriter.getPrefix(namespace);
-            if (prefix == null) {
-                prefix = generatePrefix(namespace);
-                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
-                while (true) {
-                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
-                    if (uri == null || uri.length() == 0) {
-                        break;
-                    }
-                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-                }
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            return prefix;
-        }
-
-
-  
-        /**
-        * databinding method to get an XML representation of this object
-        *
-        */
-        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
-                    throws org.apache.axis2.databinding.ADBException{
-
-
-        
-                 java.util.ArrayList elementList = new java.util.ArrayList();
-                 java.util.ArrayList attribList = new java.util.ArrayList();
-
-                 if (localValueTracker){
-                                      elementList.add(new javax.xml.namespace.QName("http://time.java/xsd",
-                                                                      "value"));
-                                 
-                                elementList.add(
-                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localValue));
-                            }
-
-                return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(), attribList.toArray());
-            
-            
-
-        }
-
-  
-
-     /**
-      *  Factory class that keeps the parse method
-      */
-    public static class Factory{
-
-        
-        
-
-        /**
-        * static method to create the object
-        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
-        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
-        * Postcondition: If this object is an element, the reader is positioned at its end element
-        *                If this object is a complex type, the reader is positioned at the end element of its outer element
-        */
-        public static Month parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            Month object =
-                new Month();
-
-            int event;
-            java.lang.String nillableValue = null;
-            java.lang.String prefix ="";
-            java.lang.String namespaceuri ="";
-            try {
-                
-                while (!reader.isStartElement() && !reader.isEndElement())
-                    reader.next();
-
-                
-                if (reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","type")!=null){
-                  java.lang.String fullTypeName = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance",
-                        "type");
-                  if (fullTypeName!=null){
-                    java.lang.String nsPrefix = null;
-                    if (fullTypeName.indexOf(":") > -1){
-                        nsPrefix = fullTypeName.substring(0,fullTypeName.indexOf(":"));
-                    }
-                    nsPrefix = nsPrefix==null?"":nsPrefix;
-
-                    java.lang.String type = fullTypeName.substring(fullTypeName.indexOf(":")+1);
-                    
-                            if (!"Month".equals(type)){
-                                //find namespace for the prefix
-                                java.lang.String nsUri = reader.getNamespaceContext().getNamespaceURI(nsPrefix);
-                                return (Month)ExtensionMapper.getTypeObject(
-                                     nsUri,type,reader);
-                              }
-                        
-
-                  }
-                
-
-                }
-
-                
-
-                
-                // Note all attributes that were handled. Used to differ normal attributes
-                // from anyAttributes.
-                java.util.Vector handledAttributes = new java.util.Vector();
-                
-
-                
-                    
-                    reader.next();
-                
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-                                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://time.java/xsd","value").equals(reader.getName())){
-                                
-                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"value" +"  cannot be null");
-                                    }
-                                    
-
-                                    java.lang.String content = reader.getElementText();
-                                    
-                                              object.setValue(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(content));
-                                              
-                                        reader.next();
-                                    
-                              }  // End of if for expected property start element
-                                
-                                    else {
-                                        
-                                               object.setValue(java.lang.Integer.MIN_VALUE);
-                                           
-                                    }
-                                  
-                            while (!reader.isStartElement() && !reader.isEndElement())
-                                reader.next();
-                            
-                                if (reader.isStartElement())
-                                // A start element we are not expecting indicates a trailing invalid property
-                                throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
-                            
-
-
-
-            } catch (javax.xml.stream.XMLStreamException e) {
-                throw new java.lang.Exception(e);
-            }
-
-            return object;
-        }
-
-        }//end of factory class
-
-        
-
-        }
-           
-    
-        public static class IOException
-        implements org.apache.axis2.databinding.ADBBean{
-        /* This type was generated from the piece of schema that had
-                name = IOException
-                Namespace URI = http://io.java/xsd
-                Namespace Prefix = ns2
-                */
-            
-
-     
-     
-        /**
-        *
-        * @param parentQName
-        * @param factory
-        * @return org.apache.axiom.om.OMElement
-        */
-       public org.apache.axiom.om.OMElement getOMElement (
-               final javax.xml.namespace.QName parentQName,
-               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
-
-
-        
-               org.apache.axiom.om.OMDataSource dataSource =
-                       new org.apache.axis2.databinding.ADBDataSource(this,parentQName);
-               return factory.createOMElement(dataSource,parentQName);
-            
-        }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter)
-                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-                           serialize(parentQName,xmlWriter,false);
-         }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                               javax.xml.stream.XMLStreamWriter xmlWriter,
-                               boolean serializeType)
-            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-            
-                
-
-
-                java.lang.String prefix = null;
-                java.lang.String namespace = null;
-                
-
-                    prefix = parentQName.getPrefix();
-                    namespace = parentQName.getNamespaceURI();
-                    writeStartElement(prefix, namespace, parentQName.getLocalPart(), xmlWriter);
-                
-                  if (serializeType){
-               
-
-                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://io.java/xsd");
-                   if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
-                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           namespacePrefix+":IOException",
-                           xmlWriter);
-                   } else {
-                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           "IOException",
-                           xmlWriter);
-                   }
-
-               
-                   }
-               
-                    xmlWriter.writeEndElement();
-               
-
-        }
-
-        private static java.lang.String generatePrefix(java.lang.String namespace) {
-            if(namespace.equals("http://io.java/xsd")){
-                return "ns2";
-            }
-            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-        }
-
-        /**
-         * Utility method to write an element start tag.
-         */
-        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
-            if (writerPrefix != null) {
-                xmlWriter.writeStartElement(namespace, localPart);
-            } else {
-                if (namespace.length() == 0) {
-                    prefix = "";
-                } else if (prefix == null) {
-                    prefix = generatePrefix(namespace);
-                }
-
-                xmlWriter.writeStartElement(prefix, localPart, namespace);
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-        }
-        
-        /**
-         * Util method to write an attribute with the ns prefix
-         */
-        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (xmlWriter.getPrefix(namespace) == null) {
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            xmlWriter.writeAttribute(namespace,attName,attValue);
-        }
-
-        /**
-         * Util method to write an attribute without the ns prefix
-         */
-        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (namespace.equals("")) {
-                xmlWriter.writeAttribute(attName,attValue);
-            } else {
-                registerPrefix(xmlWriter, namespace);
-                xmlWriter.writeAttribute(namespace,attName,attValue);
-            }
-        }
-
-
-           /**
-             * Util method to write an attribute without the ns prefix
-             */
-            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
-                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-                java.lang.String attributeNamespace = qname.getNamespaceURI();
-                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
-                if (attributePrefix == null) {
-                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
-                }
-                java.lang.String attributeValue;
-                if (attributePrefix.trim().length() > 0) {
-                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
-                } else {
-                    attributeValue = qname.getLocalPart();
-                }
-
-                if (namespace.equals("")) {
-                    xmlWriter.writeAttribute(attName, attributeValue);
-                } else {
-                    registerPrefix(xmlWriter, namespace);
-                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
-                }
-            }
-        /**
-         *  method to handle Qnames
-         */
-
-        private void writeQName(javax.xml.namespace.QName qname,
-                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String namespaceURI = qname.getNamespaceURI();
-            if (namespaceURI != null) {
-                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
-                if (prefix == null) {
-                    prefix = generatePrefix(namespaceURI);
-                    xmlWriter.writeNamespace(prefix, namespaceURI);
-                    xmlWriter.setPrefix(prefix,namespaceURI);
-                }
-
-                if (prefix.trim().length() > 0){
-                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                } else {
-                    // i.e this is the default namespace
-                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                }
-
-            } else {
-                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-            }
-        }
-
-        private void writeQNames(javax.xml.namespace.QName[] qnames,
-                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-            if (qnames != null) {
-                // we have to store this data until last moment since it is not possible to write any
-                // namespace data after writing the charactor data
-                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
-                java.lang.String namespaceURI = null;
-                java.lang.String prefix = null;
-
-                for (int i = 0; i < qnames.length; i++) {
-                    if (i > 0) {
-                        stringToWrite.append(" ");
-                    }
-                    namespaceURI = qnames[i].getNamespaceURI();
-                    if (namespaceURI != null) {
-                        prefix = xmlWriter.getPrefix(namespaceURI);
-                        if ((prefix == null) || (prefix.length() == 0)) {
-                            prefix = generatePrefix(namespaceURI);
-                            xmlWriter.writeNamespace(prefix, namespaceURI);
-                            xmlWriter.setPrefix(prefix,namespaceURI);
-                        }
-
-                        if (prefix.trim().length() > 0){
-                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        } else {
-                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        }
-                    } else {
-                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                    }
-                }
-                xmlWriter.writeCharacters(stringToWrite.toString());
-            }
-
-        }
-
-
-        /**
-         * Register a namespace prefix
-         */
-        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
-            java.lang.String prefix = xmlWriter.getPrefix(namespace);
-            if (prefix == null) {
-                prefix = generatePrefix(namespace);
-                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
-                while (true) {
-                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
-                    if (uri == null || uri.length() == 0) {
-                        break;
-                    }
-                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-                }
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            return prefix;
-        }
-
-
-  
-        /**
-        * databinding method to get an XML representation of this object
-        *
-        */
-        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
-                    throws org.apache.axis2.databinding.ADBException{
-
-
-        
-                 java.util.ArrayList elementList = new java.util.ArrayList();
-                 java.util.ArrayList attribList = new java.util.ArrayList();
-
-                
-
-                return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(), attribList.toArray());
-            
-            
-
-        }
-
-  
-
-     /**
-      *  Factory class that keeps the parse method
-      */
-    public static class Factory{
-
-        
-        
-
-        /**
-        * static method to create the object
-        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
-        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
-        * Postcondition: If this object is an element, the reader is positioned at its end element
-        *                If this object is a complex type, the reader is positioned at the end element of its outer element
-        */
-        public static IOException parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            IOException object =
-                new IOException();
-
-            int event;
-            java.lang.String nillableValue = null;
-            java.lang.String prefix ="";
-            java.lang.String namespaceuri ="";
-            try {
-                
-                while (!reader.isStartElement() && !reader.isEndElement())
-                    reader.next();
-
-                
-                if (reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","type")!=null){
-                  java.lang.String fullTypeName = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance",
-                        "type");
-                  if (fullTypeName!=null){
-                    java.lang.String nsPrefix = null;
-                    if (fullTypeName.indexOf(":") > -1){
-                        nsPrefix = fullTypeName.substring(0,fullTypeName.indexOf(":"));
-                    }
-                    nsPrefix = nsPrefix==null?"":nsPrefix;
-
-                    java.lang.String type = fullTypeName.substring(fullTypeName.indexOf(":")+1);
-                    
-                            if (!"IOException".equals(type)){
-                                //find namespace for the prefix
-                                java.lang.String nsUri = reader.getNamespaceContext().getNamespaceURI(nsPrefix);
-                                return (IOException)ExtensionMapper.getTypeObject(
-                                     nsUri,type,reader);
-                              }
-                        
-
-                  }
-                
-
-                }
-
-                
-
-                
-                // Note all attributes that were handled. Used to differ normal attributes
-                // from anyAttributes.
-                java.util.Vector handledAttributes = new java.util.Vector();
-                
-
-                
-                    
-                    reader.next();
-                  
                             while (!reader.isStartElement() && !reader.isEndElement())
                                 reader.next();
                             
@@ -3771,13 +2091,55 @@ import com.server.CurrencyConversionService;
         }
            
     
+        public static class ExtensionMapper{
+
+          public static java.lang.Object getTypeObject(java.lang.String namespaceURI,
+                                                       java.lang.String typeName,
+                                                       javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+
+              
+                  if (
+                  "http://server.com/xsd".equals(namespaceURI) &&
+                  "CurrenciesHolder".equals(typeName)){
+                   
+                            return  CurrenciesHolder.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://server.com/xsd".equals(namespaceURI) &&
+                  "DateHolder".equals(typeName)){
+                   
+                            return  DateHolder.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://io.java/xsd".equals(namespaceURI) &&
+                  "IOException".equals(typeName)){
+                   
+                            return  IOException.Factory.parse(reader);
+                        
+
+                  }
+
+              
+             throw new org.apache.axis2.databinding.ADBException("Unsupported type " + namespaceURI + " " + typeName);
+          }
+
+        }
+    
         public static class CalculateExchangedAmount
         implements org.apache.axis2.databinding.ADBBean{
         
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://server.com",
                 "calculateExchangedAmount",
-                "ns4");
+                "ns3");
 
             
 
@@ -3944,7 +2306,7 @@ import com.server.CurrencyConversionService;
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://server.com")){
-                return "ns4";
+                return "ns3";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -4289,7 +2651,7 @@ import com.server.CurrencyConversionService;
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://server.com",
                 "viewExchangeRateResponse",
-                "ns4");
+                "ns3");
 
             
 
@@ -4419,7 +2781,7 @@ import com.server.CurrencyConversionService;
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://server.com")){
-                return "ns4";
+                return "ns3";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -4730,1153 +3092,13 @@ import com.server.CurrencyConversionService;
         }
            
     
-        public static class LocalDate
-        implements org.apache.axis2.databinding.ADBBean{
-        /* This type was generated from the piece of schema that had
-                name = LocalDate
-                Namespace URI = http://time.java/xsd
-                Namespace Prefix = ns6
-                */
-            
-
-                        /**
-                        * field for Chronology
-                        */
-
-                        
-                                    protected IsoChronology localChronology ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean localChronologyTracker = false ;
-
-                           public boolean isChronologySpecified(){
-                               return localChronologyTracker;
-                           }
-
-                           
-
-                           /**
-                           * Auto generated getter method
-                           * @return IsoChronology
-                           */
-                           public  IsoChronology getChronology(){
-                               return localChronology;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param Chronology
-                               */
-                               public void setChronology(IsoChronology param){
-                            localChronologyTracker = true;
-                                   
-                                            this.localChronology=param;
-                                       
-
-                               }
-                            
-
-                        /**
-                        * field for DayOfMonth
-                        */
-
-                        
-                                    protected int localDayOfMonth ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean localDayOfMonthTracker = false ;
-
-                           public boolean isDayOfMonthSpecified(){
-                               return localDayOfMonthTracker;
-                           }
-
-                           
-
-                           /**
-                           * Auto generated getter method
-                           * @return int
-                           */
-                           public  int getDayOfMonth(){
-                               return localDayOfMonth;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param DayOfMonth
-                               */
-                               public void setDayOfMonth(int param){
-                            
-                                       // setting primitive attribute tracker to true
-                                       localDayOfMonthTracker =
-                                       param != java.lang.Integer.MIN_VALUE;
-                                   
-                                            this.localDayOfMonth=param;
-                                       
-
-                               }
-                            
-
-                        /**
-                        * field for DayOfWeek
-                        */
-
-                        
-                                    protected DayOfWeek localDayOfWeek ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean localDayOfWeekTracker = false ;
-
-                           public boolean isDayOfWeekSpecified(){
-                               return localDayOfWeekTracker;
-                           }
-
-                           
-
-                           /**
-                           * Auto generated getter method
-                           * @return DayOfWeek
-                           */
-                           public  DayOfWeek getDayOfWeek(){
-                               return localDayOfWeek;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param DayOfWeek
-                               */
-                               public void setDayOfWeek(DayOfWeek param){
-                            localDayOfWeekTracker = true;
-                                   
-                                            this.localDayOfWeek=param;
-                                       
-
-                               }
-                            
-
-                        /**
-                        * field for DayOfYear
-                        */
-
-                        
-                                    protected int localDayOfYear ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean localDayOfYearTracker = false ;
-
-                           public boolean isDayOfYearSpecified(){
-                               return localDayOfYearTracker;
-                           }
-
-                           
-
-                           /**
-                           * Auto generated getter method
-                           * @return int
-                           */
-                           public  int getDayOfYear(){
-                               return localDayOfYear;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param DayOfYear
-                               */
-                               public void setDayOfYear(int param){
-                            
-                                       // setting primitive attribute tracker to true
-                                       localDayOfYearTracker =
-                                       param != java.lang.Integer.MIN_VALUE;
-                                   
-                                            this.localDayOfYear=param;
-                                       
-
-                               }
-                            
-
-                        /**
-                        * field for Era
-                        */
-
-                        
-                                    protected Era localEra ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean localEraTracker = false ;
-
-                           public boolean isEraSpecified(){
-                               return localEraTracker;
-                           }
-
-                           
-
-                           /**
-                           * Auto generated getter method
-                           * @return Era
-                           */
-                           public  Era getEra(){
-                               return localEra;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param Era
-                               */
-                               public void setEra(Era param){
-                            localEraTracker = true;
-                                   
-                                            this.localEra=param;
-                                       
-
-                               }
-                            
-
-                        /**
-                        * field for LeapYear
-                        */
-
-                        
-                                    protected boolean localLeapYear ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean localLeapYearTracker = false ;
-
-                           public boolean isLeapYearSpecified(){
-                               return localLeapYearTracker;
-                           }
-
-                           
-
-                           /**
-                           * Auto generated getter method
-                           * @return boolean
-                           */
-                           public  boolean getLeapYear(){
-                               return localLeapYear;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param LeapYear
-                               */
-                               public void setLeapYear(boolean param){
-                            
-                                       // setting primitive attribute tracker to true
-                                       localLeapYearTracker =
-                                       true;
-                                   
-                                            this.localLeapYear=param;
-                                       
-
-                               }
-                            
-
-                        /**
-                        * field for Month
-                        */
-
-                        
-                                    protected Month localMonth ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean localMonthTracker = false ;
-
-                           public boolean isMonthSpecified(){
-                               return localMonthTracker;
-                           }
-
-                           
-
-                           /**
-                           * Auto generated getter method
-                           * @return Month
-                           */
-                           public  Month getMonth(){
-                               return localMonth;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param Month
-                               */
-                               public void setMonth(Month param){
-                            localMonthTracker = true;
-                                   
-                                            this.localMonth=param;
-                                       
-
-                               }
-                            
-
-                        /**
-                        * field for MonthValue
-                        */
-
-                        
-                                    protected int localMonthValue ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean localMonthValueTracker = false ;
-
-                           public boolean isMonthValueSpecified(){
-                               return localMonthValueTracker;
-                           }
-
-                           
-
-                           /**
-                           * Auto generated getter method
-                           * @return int
-                           */
-                           public  int getMonthValue(){
-                               return localMonthValue;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param MonthValue
-                               */
-                               public void setMonthValue(int param){
-                            
-                                       // setting primitive attribute tracker to true
-                                       localMonthValueTracker =
-                                       param != java.lang.Integer.MIN_VALUE;
-                                   
-                                            this.localMonthValue=param;
-                                       
-
-                               }
-                            
-
-                        /**
-                        * field for Year
-                        */
-
-                        
-                                    protected int localYear ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean localYearTracker = false ;
-
-                           public boolean isYearSpecified(){
-                               return localYearTracker;
-                           }
-
-                           
-
-                           /**
-                           * Auto generated getter method
-                           * @return int
-                           */
-                           public  int getYear(){
-                               return localYear;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param Year
-                               */
-                               public void setYear(int param){
-                            
-                                       // setting primitive attribute tracker to true
-                                       localYearTracker =
-                                       param != java.lang.Integer.MIN_VALUE;
-                                   
-                                            this.localYear=param;
-                                       
-
-                               }
-                            
-
-     
-     
-        /**
-        *
-        * @param parentQName
-        * @param factory
-        * @return org.apache.axiom.om.OMElement
-        */
-       public org.apache.axiom.om.OMElement getOMElement (
-               final javax.xml.namespace.QName parentQName,
-               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
-
-
-        
-               org.apache.axiom.om.OMDataSource dataSource =
-                       new org.apache.axis2.databinding.ADBDataSource(this,parentQName);
-               return factory.createOMElement(dataSource,parentQName);
-            
-        }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter)
-                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-                           serialize(parentQName,xmlWriter,false);
-         }
-
-         public void serialize(final javax.xml.namespace.QName parentQName,
-                               javax.xml.stream.XMLStreamWriter xmlWriter,
-                               boolean serializeType)
-            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
-            
-                
-
-
-                java.lang.String prefix = null;
-                java.lang.String namespace = null;
-                
-
-                    prefix = parentQName.getPrefix();
-                    namespace = parentQName.getNamespaceURI();
-                    writeStartElement(prefix, namespace, parentQName.getLocalPart(), xmlWriter);
-                
-                  if (serializeType){
-               
-
-                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://time.java/xsd");
-                   if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
-                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           namespacePrefix+":LocalDate",
-                           xmlWriter);
-                   } else {
-                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           "LocalDate",
-                           xmlWriter);
-                   }
-
-               
-                   }
-                if (localChronologyTracker){
-                                    if (localChronology==null){
-
-                                        writeStartElement(null, "http://time.java/xsd", "chronology", xmlWriter);
-
-                                       // write the nil attribute
-                                      writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                      xmlWriter.writeEndElement();
-                                    }else{
-                                     localChronology.serialize(new javax.xml.namespace.QName("http://time.java/xsd","chronology"),
-                                        xmlWriter);
-                                    }
-                                } if (localDayOfMonthTracker){
-                                    namespace = "http://time.java/xsd";
-                                    writeStartElement(null, namespace, "dayOfMonth", xmlWriter);
-                             
-                                               if (localDayOfMonth==java.lang.Integer.MIN_VALUE) {
-                                           
-                                                         throw new org.apache.axis2.databinding.ADBException("dayOfMonth cannot be null!!");
-                                                      
-                                               } else {
-                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localDayOfMonth));
-                                               }
-                                    
-                                   xmlWriter.writeEndElement();
-                             } if (localDayOfWeekTracker){
-                                    if (localDayOfWeek==null){
-
-                                        writeStartElement(null, "http://time.java/xsd", "dayOfWeek", xmlWriter);
-
-                                       // write the nil attribute
-                                      writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                      xmlWriter.writeEndElement();
-                                    }else{
-                                     localDayOfWeek.serialize(new javax.xml.namespace.QName("http://time.java/xsd","dayOfWeek"),
-                                        xmlWriter);
-                                    }
-                                } if (localDayOfYearTracker){
-                                    namespace = "http://time.java/xsd";
-                                    writeStartElement(null, namespace, "dayOfYear", xmlWriter);
-                             
-                                               if (localDayOfYear==java.lang.Integer.MIN_VALUE) {
-                                           
-                                                         throw new org.apache.axis2.databinding.ADBException("dayOfYear cannot be null!!");
-                                                      
-                                               } else {
-                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localDayOfYear));
-                                               }
-                                    
-                                   xmlWriter.writeEndElement();
-                             } if (localEraTracker){
-                                    if (localEra==null){
-
-                                        writeStartElement(null, "http://time.java/xsd", "era", xmlWriter);
-
-                                       // write the nil attribute
-                                      writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                      xmlWriter.writeEndElement();
-                                    }else{
-                                     localEra.serialize(new javax.xml.namespace.QName("http://time.java/xsd","era"),
-                                        xmlWriter);
-                                    }
-                                } if (localLeapYearTracker){
-                                    namespace = "http://time.java/xsd";
-                                    writeStartElement(null, namespace, "leapYear", xmlWriter);
-                             
-                                               if (false) {
-                                           
-                                                         throw new org.apache.axis2.databinding.ADBException("leapYear cannot be null!!");
-                                                      
-                                               } else {
-                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localLeapYear));
-                                               }
-                                    
-                                   xmlWriter.writeEndElement();
-                             } if (localMonthTracker){
-                                    if (localMonth==null){
-
-                                        writeStartElement(null, "http://time.java/xsd", "month", xmlWriter);
-
-                                       // write the nil attribute
-                                      writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                      xmlWriter.writeEndElement();
-                                    }else{
-                                     localMonth.serialize(new javax.xml.namespace.QName("http://time.java/xsd","month"),
-                                        xmlWriter);
-                                    }
-                                } if (localMonthValueTracker){
-                                    namespace = "http://time.java/xsd";
-                                    writeStartElement(null, namespace, "monthValue", xmlWriter);
-                             
-                                               if (localMonthValue==java.lang.Integer.MIN_VALUE) {
-                                           
-                                                         throw new org.apache.axis2.databinding.ADBException("monthValue cannot be null!!");
-                                                      
-                                               } else {
-                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localMonthValue));
-                                               }
-                                    
-                                   xmlWriter.writeEndElement();
-                             } if (localYearTracker){
-                                    namespace = "http://time.java/xsd";
-                                    writeStartElement(null, namespace, "year", xmlWriter);
-                             
-                                               if (localYear==java.lang.Integer.MIN_VALUE) {
-                                           
-                                                         throw new org.apache.axis2.databinding.ADBException("year cannot be null!!");
-                                                      
-                                               } else {
-                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localYear));
-                                               }
-                                    
-                                   xmlWriter.writeEndElement();
-                             }
-                    xmlWriter.writeEndElement();
-               
-
-        }
-
-        private static java.lang.String generatePrefix(java.lang.String namespace) {
-            if(namespace.equals("http://time.java/xsd")){
-                return "ns6";
-            }
-            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-        }
-
-        /**
-         * Utility method to write an element start tag.
-         */
-        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
-                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
-            if (writerPrefix != null) {
-                xmlWriter.writeStartElement(namespace, localPart);
-            } else {
-                if (namespace.length() == 0) {
-                    prefix = "";
-                } else if (prefix == null) {
-                    prefix = generatePrefix(namespace);
-                }
-
-                xmlWriter.writeStartElement(prefix, localPart, namespace);
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-        }
-        
-        /**
-         * Util method to write an attribute with the ns prefix
-         */
-        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (xmlWriter.getPrefix(namespace) == null) {
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            xmlWriter.writeAttribute(namespace,attName,attValue);
-        }
-
-        /**
-         * Util method to write an attribute without the ns prefix
-         */
-        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
-                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
-            if (namespace.equals("")) {
-                xmlWriter.writeAttribute(attName,attValue);
-            } else {
-                registerPrefix(xmlWriter, namespace);
-                xmlWriter.writeAttribute(namespace,attName,attValue);
-            }
-        }
-
-
-           /**
-             * Util method to write an attribute without the ns prefix
-             */
-            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
-                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-                java.lang.String attributeNamespace = qname.getNamespaceURI();
-                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
-                if (attributePrefix == null) {
-                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
-                }
-                java.lang.String attributeValue;
-                if (attributePrefix.trim().length() > 0) {
-                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
-                } else {
-                    attributeValue = qname.getLocalPart();
-                }
-
-                if (namespace.equals("")) {
-                    xmlWriter.writeAttribute(attName, attributeValue);
-                } else {
-                    registerPrefix(xmlWriter, namespace);
-                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
-                }
-            }
-        /**
-         *  method to handle Qnames
-         */
-
-        private void writeQName(javax.xml.namespace.QName qname,
-                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-            java.lang.String namespaceURI = qname.getNamespaceURI();
-            if (namespaceURI != null) {
-                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
-                if (prefix == null) {
-                    prefix = generatePrefix(namespaceURI);
-                    xmlWriter.writeNamespace(prefix, namespaceURI);
-                    xmlWriter.setPrefix(prefix,namespaceURI);
-                }
-
-                if (prefix.trim().length() > 0){
-                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                } else {
-                    // i.e this is the default namespace
-                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-                }
-
-            } else {
-                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
-            }
-        }
-
-        private void writeQNames(javax.xml.namespace.QName[] qnames,
-                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
-
-            if (qnames != null) {
-                // we have to store this data until last moment since it is not possible to write any
-                // namespace data after writing the charactor data
-                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
-                java.lang.String namespaceURI = null;
-                java.lang.String prefix = null;
-
-                for (int i = 0; i < qnames.length; i++) {
-                    if (i > 0) {
-                        stringToWrite.append(" ");
-                    }
-                    namespaceURI = qnames[i].getNamespaceURI();
-                    if (namespaceURI != null) {
-                        prefix = xmlWriter.getPrefix(namespaceURI);
-                        if ((prefix == null) || (prefix.length() == 0)) {
-                            prefix = generatePrefix(namespaceURI);
-                            xmlWriter.writeNamespace(prefix, namespaceURI);
-                            xmlWriter.setPrefix(prefix,namespaceURI);
-                        }
-
-                        if (prefix.trim().length() > 0){
-                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        } else {
-                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                        }
-                    } else {
-                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
-                    }
-                }
-                xmlWriter.writeCharacters(stringToWrite.toString());
-            }
-
-        }
-
-
-        /**
-         * Register a namespace prefix
-         */
-        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
-            java.lang.String prefix = xmlWriter.getPrefix(namespace);
-            if (prefix == null) {
-                prefix = generatePrefix(namespace);
-                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
-                while (true) {
-                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
-                    if (uri == null || uri.length() == 0) {
-                        break;
-                    }
-                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
-                }
-                xmlWriter.writeNamespace(prefix, namespace);
-                xmlWriter.setPrefix(prefix, namespace);
-            }
-            return prefix;
-        }
-
-
-  
-        /**
-        * databinding method to get an XML representation of this object
-        *
-        */
-        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
-                    throws org.apache.axis2.databinding.ADBException{
-
-
-        
-                 java.util.ArrayList elementList = new java.util.ArrayList();
-                 java.util.ArrayList attribList = new java.util.ArrayList();
-
-                 if (localChronologyTracker){
-                            elementList.add(new javax.xml.namespace.QName("http://time.java/xsd",
-                                                                      "chronology"));
-                            
-                            
-                                    elementList.add(localChronology==null?null:
-                                    localChronology);
-                                } if (localDayOfMonthTracker){
-                                      elementList.add(new javax.xml.namespace.QName("http://time.java/xsd",
-                                                                      "dayOfMonth"));
-                                 
-                                elementList.add(
-                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localDayOfMonth));
-                            } if (localDayOfWeekTracker){
-                            elementList.add(new javax.xml.namespace.QName("http://time.java/xsd",
-                                                                      "dayOfWeek"));
-                            
-                            
-                                    elementList.add(localDayOfWeek==null?null:
-                                    localDayOfWeek);
-                                } if (localDayOfYearTracker){
-                                      elementList.add(new javax.xml.namespace.QName("http://time.java/xsd",
-                                                                      "dayOfYear"));
-                                 
-                                elementList.add(
-                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localDayOfYear));
-                            } if (localEraTracker){
-                            elementList.add(new javax.xml.namespace.QName("http://time.java/xsd",
-                                                                      "era"));
-                            
-                            
-                                    elementList.add(localEra==null?null:
-                                    localEra);
-                                } if (localLeapYearTracker){
-                                      elementList.add(new javax.xml.namespace.QName("http://time.java/xsd",
-                                                                      "leapYear"));
-                                 
-                                elementList.add(
-                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localLeapYear));
-                            } if (localMonthTracker){
-                            elementList.add(new javax.xml.namespace.QName("http://time.java/xsd",
-                                                                      "month"));
-                            
-                            
-                                    elementList.add(localMonth==null?null:
-                                    localMonth);
-                                } if (localMonthValueTracker){
-                                      elementList.add(new javax.xml.namespace.QName("http://time.java/xsd",
-                                                                      "monthValue"));
-                                 
-                                elementList.add(
-                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localMonthValue));
-                            } if (localYearTracker){
-                                      elementList.add(new javax.xml.namespace.QName("http://time.java/xsd",
-                                                                      "year"));
-                                 
-                                elementList.add(
-                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localYear));
-                            }
-
-                return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(), attribList.toArray());
-            
-            
-
-        }
-
-  
-
-     /**
-      *  Factory class that keeps the parse method
-      */
-    public static class Factory{
-
-        
-        
-
-        /**
-        * static method to create the object
-        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
-        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
-        * Postcondition: If this object is an element, the reader is positioned at its end element
-        *                If this object is a complex type, the reader is positioned at the end element of its outer element
-        */
-        public static LocalDate parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            LocalDate object =
-                new LocalDate();
-
-            int event;
-            java.lang.String nillableValue = null;
-            java.lang.String prefix ="";
-            java.lang.String namespaceuri ="";
-            try {
-                
-                while (!reader.isStartElement() && !reader.isEndElement())
-                    reader.next();
-
-                
-                if (reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","type")!=null){
-                  java.lang.String fullTypeName = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance",
-                        "type");
-                  if (fullTypeName!=null){
-                    java.lang.String nsPrefix = null;
-                    if (fullTypeName.indexOf(":") > -1){
-                        nsPrefix = fullTypeName.substring(0,fullTypeName.indexOf(":"));
-                    }
-                    nsPrefix = nsPrefix==null?"":nsPrefix;
-
-                    java.lang.String type = fullTypeName.substring(fullTypeName.indexOf(":")+1);
-                    
-                            if (!"LocalDate".equals(type)){
-                                //find namespace for the prefix
-                                java.lang.String nsUri = reader.getNamespaceContext().getNamespaceURI(nsPrefix);
-                                return (LocalDate)ExtensionMapper.getTypeObject(
-                                     nsUri,type,reader);
-                              }
-                        
-
-                  }
-                
-
-                }
-
-                
-
-                
-                // Note all attributes that were handled. Used to differ normal attributes
-                // from anyAttributes.
-                java.util.Vector handledAttributes = new java.util.Vector();
-                
-
-                
-                    
-                    reader.next();
-                
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-                                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://time.java/xsd","chronology").equals(reader.getName())){
-                                
-                                      nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                      if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                          object.setChronology(null);
-                                          reader.next();
-                                            
-                                            reader.next();
-                                          
-                                      }else{
-                                    
-                                                object.setChronology(IsoChronology.Factory.parse(reader));
-                                              
-                                        reader.next();
-                                    }
-                              }  // End of if for expected property start element
-                                
-                                    else {
-                                        
-                                    }
-                                
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-                                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://time.java/xsd","dayOfMonth").equals(reader.getName())){
-                                
-                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"dayOfMonth" +"  cannot be null");
-                                    }
-                                    
-
-                                    java.lang.String content = reader.getElementText();
-                                    
-                                              object.setDayOfMonth(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(content));
-                                              
-                                        reader.next();
-                                    
-                              }  // End of if for expected property start element
-                                
-                                    else {
-                                        
-                                               object.setDayOfMonth(java.lang.Integer.MIN_VALUE);
-                                           
-                                    }
-                                
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-                                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://time.java/xsd","dayOfWeek").equals(reader.getName())){
-                                
-                                      nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                      if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                          object.setDayOfWeek(null);
-                                          reader.next();
-                                            
-                                            reader.next();
-                                          
-                                      }else{
-                                    
-                                                object.setDayOfWeek(DayOfWeek.Factory.parse(reader));
-                                              
-                                        reader.next();
-                                    }
-                              }  // End of if for expected property start element
-                                
-                                    else {
-                                        
-                                    }
-                                
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-                                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://time.java/xsd","dayOfYear").equals(reader.getName())){
-                                
-                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"dayOfYear" +"  cannot be null");
-                                    }
-                                    
-
-                                    java.lang.String content = reader.getElementText();
-                                    
-                                              object.setDayOfYear(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(content));
-                                              
-                                        reader.next();
-                                    
-                              }  // End of if for expected property start element
-                                
-                                    else {
-                                        
-                                               object.setDayOfYear(java.lang.Integer.MIN_VALUE);
-                                           
-                                    }
-                                
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-                                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://time.java/xsd","era").equals(reader.getName())){
-                                
-                                      nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                      if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                          object.setEra(null);
-                                          reader.next();
-                                            
-                                            reader.next();
-                                          
-                                      }else{
-                                    
-                                                object.setEra(Era.Factory.parse(reader));
-                                              
-                                        reader.next();
-                                    }
-                              }  // End of if for expected property start element
-                                
-                                    else {
-                                        
-                                    }
-                                
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-                                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://time.java/xsd","leapYear").equals(reader.getName())){
-                                
-                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"leapYear" +"  cannot be null");
-                                    }
-                                    
-
-                                    java.lang.String content = reader.getElementText();
-                                    
-                                              object.setLeapYear(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToBoolean(content));
-                                              
-                                        reader.next();
-                                    
-                              }  // End of if for expected property start element
-                                
-                                    else {
-                                        
-                                    }
-                                
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-                                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://time.java/xsd","month").equals(reader.getName())){
-                                
-                                      nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                      if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                          object.setMonth(null);
-                                          reader.next();
-                                            
-                                            reader.next();
-                                          
-                                      }else{
-                                    
-                                                object.setMonth(Month.Factory.parse(reader));
-                                              
-                                        reader.next();
-                                    }
-                              }  // End of if for expected property start element
-                                
-                                    else {
-                                        
-                                    }
-                                
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-                                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://time.java/xsd","monthValue").equals(reader.getName())){
-                                
-                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"monthValue" +"  cannot be null");
-                                    }
-                                    
-
-                                    java.lang.String content = reader.getElementText();
-                                    
-                                              object.setMonthValue(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(content));
-                                              
-                                        reader.next();
-                                    
-                              }  // End of if for expected property start element
-                                
-                                    else {
-                                        
-                                               object.setMonthValue(java.lang.Integer.MIN_VALUE);
-                                           
-                                    }
-                                
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-                                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://time.java/xsd","year").equals(reader.getName())){
-                                
-                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"year" +"  cannot be null");
-                                    }
-                                    
-
-                                    java.lang.String content = reader.getElementText();
-                                    
-                                              object.setYear(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(content));
-                                              
-                                        reader.next();
-                                    
-                              }  // End of if for expected property start element
-                                
-                                    else {
-                                        
-                                               object.setYear(java.lang.Integer.MIN_VALUE);
-                                           
-                                    }
-                                  
-                            while (!reader.isStartElement() && !reader.isEndElement())
-                                reader.next();
-                            
-                                if (reader.isStartElement())
-                                // A start element we are not expecting indicates a trailing invalid property
-                                throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
-                            
-
-
-
-            } catch (javax.xml.stream.XMLStreamException e) {
-                throw new java.lang.Exception(e);
-            }
-
-            return object;
-        }
-
-        }//end of factory class
-
-        
-
-        }
-           
-    
         public static class CalculateExchangedAmountResponse
         implements org.apache.axis2.databinding.ADBBean{
         
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://server.com",
                 "calculateExchangedAmountResponse",
-                "ns4");
+                "ns3");
 
             
 
@@ -6006,7 +3228,7 @@ import com.server.CurrencyConversionService;
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://server.com")){
-                return "ns4";
+                return "ns3";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -6323,7 +3545,7 @@ import com.server.CurrencyConversionService;
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://server.com",
                 "CurrencyConversionServiceIOException",
-                "ns4");
+                "ns3");
 
             
 
@@ -6447,7 +3669,7 @@ import com.server.CurrencyConversionService;
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://server.com")){
-                return "ns4";
+                return "ns3";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -6761,7 +3983,7 @@ import com.server.CurrencyConversionService;
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://server.com",
                 "viewExchangeRate",
-                "ns4");
+                "ns3");
 
             
 
@@ -6937,7 +4159,7 @@ import com.server.CurrencyConversionService;
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://server.com")){
-                return "ns4";
+                return "ns3";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -7299,30 +4521,30 @@ import com.server.CurrencyConversionService;
         }
            
     
-        public static class DayOfWeek
+        public static class DateHolder
         implements org.apache.axis2.databinding.ADBBean{
         /* This type was generated from the piece of schema that had
-                name = DayOfWeek
-                Namespace URI = http://time.java/xsd
-                Namespace Prefix = ns6
+                name = DateHolder
+                Namespace URI = http://server.com/xsd
+                Namespace Prefix = ns1
                 */
             
 
                         /**
-                        * field for Value
+                        * field for Day
                         */
 
                         
-                                    protected int localValue ;
+                                    protected int localDay ;
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
                           *   for this attribute. It will be used to determine whether to include this field
                            *   in the serialized XML
                            */
-                           protected boolean localValueTracker = false ;
+                           protected boolean localDayTracker = false ;
 
-                           public boolean isValueSpecified(){
-                               return localValueTracker;
+                           public boolean isDaySpecified(){
+                               return localDayTracker;
                            }
 
                            
@@ -7331,23 +4553,113 @@ import com.server.CurrencyConversionService;
                            * Auto generated getter method
                            * @return int
                            */
-                           public  int getValue(){
-                               return localValue;
+                           public  int getDay(){
+                               return localDay;
                            }
 
                            
                         
                             /**
                                * Auto generated setter method
-                               * @param param Value
+                               * @param param Day
                                */
-                               public void setValue(int param){
+                               public void setDay(int param){
                             
                                        // setting primitive attribute tracker to true
-                                       localValueTracker =
+                                       localDayTracker =
                                        param != java.lang.Integer.MIN_VALUE;
                                    
-                                            this.localValue=param;
+                                            this.localDay=param;
+                                       
+
+                               }
+                            
+
+                        /**
+                        * field for Month
+                        */
+
+                        
+                                    protected int localMonth ;
+                                
+                           /*  This tracker boolean wil be used to detect whether the user called the set method
+                          *   for this attribute. It will be used to determine whether to include this field
+                           *   in the serialized XML
+                           */
+                           protected boolean localMonthTracker = false ;
+
+                           public boolean isMonthSpecified(){
+                               return localMonthTracker;
+                           }
+
+                           
+
+                           /**
+                           * Auto generated getter method
+                           * @return int
+                           */
+                           public  int getMonth(){
+                               return localMonth;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param Month
+                               */
+                               public void setMonth(int param){
+                            
+                                       // setting primitive attribute tracker to true
+                                       localMonthTracker =
+                                       param != java.lang.Integer.MIN_VALUE;
+                                   
+                                            this.localMonth=param;
+                                       
+
+                               }
+                            
+
+                        /**
+                        * field for Year
+                        */
+
+                        
+                                    protected int localYear ;
+                                
+                           /*  This tracker boolean wil be used to detect whether the user called the set method
+                          *   for this attribute. It will be used to determine whether to include this field
+                           *   in the serialized XML
+                           */
+                           protected boolean localYearTracker = false ;
+
+                           public boolean isYearSpecified(){
+                               return localYearTracker;
+                           }
+
+                           
+
+                           /**
+                           * Auto generated getter method
+                           * @return int
+                           */
+                           public  int getYear(){
+                               return localYear;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param Year
+                               */
+                               public void setYear(int param){
+                            
+                                       // setting primitive attribute tracker to true
+                                       localYearTracker =
+                                       param != java.lang.Integer.MIN_VALUE;
+                                   
+                                            this.localYear=param;
                                        
 
                                }
@@ -7398,29 +4710,55 @@ import com.server.CurrencyConversionService;
                   if (serializeType){
                
 
-                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://time.java/xsd");
+                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://server.com/xsd");
                    if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
                        writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           namespacePrefix+":DayOfWeek",
+                           namespacePrefix+":DateHolder",
                            xmlWriter);
                    } else {
                        writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           "DayOfWeek",
+                           "DateHolder",
                            xmlWriter);
                    }
 
                
                    }
-                if (localValueTracker){
-                                    namespace = "http://time.java/xsd";
-                                    writeStartElement(null, namespace, "value", xmlWriter);
+                if (localDayTracker){
+                                    namespace = "http://server.com/xsd";
+                                    writeStartElement(null, namespace, "day", xmlWriter);
                              
-                                               if (localValue==java.lang.Integer.MIN_VALUE) {
+                                               if (localDay==java.lang.Integer.MIN_VALUE) {
                                            
-                                                         throw new org.apache.axis2.databinding.ADBException("value cannot be null!!");
+                                                         throw new org.apache.axis2.databinding.ADBException("day cannot be null!!");
                                                       
                                                } else {
-                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localValue));
+                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localDay));
+                                               }
+                                    
+                                   xmlWriter.writeEndElement();
+                             } if (localMonthTracker){
+                                    namespace = "http://server.com/xsd";
+                                    writeStartElement(null, namespace, "month", xmlWriter);
+                             
+                                               if (localMonth==java.lang.Integer.MIN_VALUE) {
+                                           
+                                                         throw new org.apache.axis2.databinding.ADBException("month cannot be null!!");
+                                                      
+                                               } else {
+                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localMonth));
+                                               }
+                                    
+                                   xmlWriter.writeEndElement();
+                             } if (localYearTracker){
+                                    namespace = "http://server.com/xsd";
+                                    writeStartElement(null, namespace, "year", xmlWriter);
+                             
+                                               if (localYear==java.lang.Integer.MIN_VALUE) {
+                                           
+                                                         throw new org.apache.axis2.databinding.ADBException("year cannot be null!!");
+                                                      
+                                               } else {
+                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localYear));
                                                }
                                     
                                    xmlWriter.writeEndElement();
@@ -7431,8 +4769,8 @@ import com.server.CurrencyConversionService;
         }
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
-            if(namespace.equals("http://time.java/xsd")){
-                return "ns6";
+            if(namespace.equals("http://server.com/xsd")){
+                return "ns1";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -7609,12 +4947,24 @@ import com.server.CurrencyConversionService;
                  java.util.ArrayList elementList = new java.util.ArrayList();
                  java.util.ArrayList attribList = new java.util.ArrayList();
 
-                 if (localValueTracker){
-                                      elementList.add(new javax.xml.namespace.QName("http://time.java/xsd",
-                                                                      "value"));
+                 if (localDayTracker){
+                                      elementList.add(new javax.xml.namespace.QName("http://server.com/xsd",
+                                                                      "day"));
                                  
                                 elementList.add(
-                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localValue));
+                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localDay));
+                            } if (localMonthTracker){
+                                      elementList.add(new javax.xml.namespace.QName("http://server.com/xsd",
+                                                                      "month"));
+                                 
+                                elementList.add(
+                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localMonth));
+                            } if (localYearTracker){
+                                      elementList.add(new javax.xml.namespace.QName("http://server.com/xsd",
+                                                                      "year"));
+                                 
+                                elementList.add(
+                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localYear));
                             }
 
                 return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(), attribList.toArray());
@@ -7640,9 +4990,9 @@ import com.server.CurrencyConversionService;
         * Postcondition: If this object is an element, the reader is positioned at its end element
         *                If this object is a complex type, the reader is positioned at the end element of its outer element
         */
-        public static DayOfWeek parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            DayOfWeek object =
-                new DayOfWeek();
+        public static DateHolder parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            DateHolder object =
+                new DateHolder();
 
             int event;
             java.lang.String nillableValue = null;
@@ -7666,10 +5016,10 @@ import com.server.CurrencyConversionService;
 
                     java.lang.String type = fullTypeName.substring(fullTypeName.indexOf(":")+1);
                     
-                            if (!"DayOfWeek".equals(type)){
+                            if (!"DateHolder".equals(type)){
                                 //find namespace for the prefix
                                 java.lang.String nsUri = reader.getNamespaceContext().getNamespaceURI(nsPrefix);
-                                return (DayOfWeek)ExtensionMapper.getTypeObject(
+                                return (DateHolder)ExtensionMapper.getTypeObject(
                                      nsUri,type,reader);
                               }
                         
@@ -7694,17 +5044,17 @@ import com.server.CurrencyConversionService;
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://time.java/xsd","value").equals(reader.getName())){
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://server.com/xsd","day").equals(reader.getName())){
                                 
                                     nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
                                     if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"value" +"  cannot be null");
+                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"day" +"  cannot be null");
                                     }
                                     
 
                                     java.lang.String content = reader.getElementText();
                                     
-                                              object.setValue(
+                                              object.setDay(
                                                     org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(content));
                                               
                                         reader.next();
@@ -7713,7 +5063,59 @@ import com.server.CurrencyConversionService;
                                 
                                     else {
                                         
-                                               object.setValue(java.lang.Integer.MIN_VALUE);
+                                               object.setDay(java.lang.Integer.MIN_VALUE);
+                                           
+                                    }
+                                
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://server.com/xsd","month").equals(reader.getName())){
+                                
+                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
+                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
+                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"month" +"  cannot be null");
+                                    }
+                                    
+
+                                    java.lang.String content = reader.getElementText();
+                                    
+                                              object.setMonth(
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(content));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                    else {
+                                        
+                                               object.setMonth(java.lang.Integer.MIN_VALUE);
+                                           
+                                    }
+                                
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://server.com/xsd","year").equals(reader.getName())){
+                                
+                                    nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
+                                    if ("true".equals(nillableValue) || "1".equals(nillableValue)){
+                                        throw new org.apache.axis2.databinding.ADBException("The element: "+"year" +"  cannot be null");
+                                    }
+                                    
+
+                                    java.lang.String content = reader.getElementText();
+                                    
+                                              object.setYear(
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(content));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                    else {
+                                        
+                                               object.setYear(java.lang.Integer.MIN_VALUE);
                                            
                                     }
                                   
@@ -7741,98 +5143,14 @@ import com.server.CurrencyConversionService;
         }
            
     
-        public static class IsoChronology extends AbstractChronology
+        public static class IOException
         implements org.apache.axis2.databinding.ADBBean{
         /* This type was generated from the piece of schema that had
-                name = IsoChronology
-                Namespace URI = http://chrono.time.java/xsd
-                Namespace Prefix = ns5
+                name = IOException
+                Namespace URI = http://io.java/xsd
+                Namespace Prefix = ns2
                 */
             
-
-                        /**
-                        * field for CalendarType
-                        */
-
-                        
-                                    protected java.lang.String localCalendarType ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean localCalendarTypeTracker = false ;
-
-                           public boolean isCalendarTypeSpecified(){
-                               return localCalendarTypeTracker;
-                           }
-
-                           
-
-                           /**
-                           * Auto generated getter method
-                           * @return java.lang.String
-                           */
-                           public  java.lang.String getCalendarType(){
-                               return localCalendarType;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param CalendarType
-                               */
-                               public void setCalendarType(java.lang.String param){
-                            localCalendarTypeTracker = true;
-                                   
-                                            this.localCalendarType=param;
-                                       
-
-                               }
-                            
-
-                        /**
-                        * field for Id
-                        */
-
-                        
-                                    protected java.lang.String localId ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean localIdTracker = false ;
-
-                           public boolean isIdSpecified(){
-                               return localIdTracker;
-                           }
-
-                           
-
-                           /**
-                           * Auto generated getter method
-                           * @return java.lang.String
-                           */
-                           public  java.lang.String getId(){
-                               return localId;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param Id
-                               */
-                               public void setId(java.lang.String param){
-                            localIdTracker = true;
-                                   
-                                            this.localId=param;
-                                       
-
-                               }
-                            
 
      
      
@@ -7876,63 +5194,31 @@ import com.server.CurrencyConversionService;
                     namespace = parentQName.getNamespaceURI();
                     writeStartElement(prefix, namespace, parentQName.getLocalPart(), xmlWriter);
                 
+                  if (serializeType){
+               
 
-                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://chrono.time.java/xsd");
+                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://io.java/xsd");
                    if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
                        writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           namespacePrefix+":IsoChronology",
+                           namespacePrefix+":IOException",
                            xmlWriter);
                    } else {
                        writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           "IsoChronology",
+                           "IOException",
                            xmlWriter);
                    }
 
-                if (localCalendarTypeTracker){
-                                    namespace = "http://chrono.time.java/xsd";
-                                    writeStartElement(null, namespace, "calendarType", xmlWriter);
-                             
-
-                                          if (localCalendarType==null){
-                                              // write the nil attribute
-                                              
-                                                     writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                                  
-                                          }else{
-
-                                        
-                                                   xmlWriter.writeCharacters(localCalendarType);
-                                            
-                                          }
-                                    
-                                   xmlWriter.writeEndElement();
-                             } if (localIdTracker){
-                                    namespace = "http://chrono.time.java/xsd";
-                                    writeStartElement(null, namespace, "id", xmlWriter);
-                             
-
-                                          if (localId==null){
-                                              // write the nil attribute
-                                              
-                                                     writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                                  
-                                          }else{
-
-                                        
-                                                   xmlWriter.writeCharacters(localId);
-                                            
-                                          }
-                                    
-                                   xmlWriter.writeEndElement();
-                             }
+               
+                   }
+               
                     xmlWriter.writeEndElement();
                
 
         }
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
-            if(namespace.equals("http://chrono.time.java/xsd")){
-                return "ns5";
+            if(namespace.equals("http://io.java/xsd")){
+                return "ns2";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -8110,21 +5396,6 @@ import com.server.CurrencyConversionService;
                  java.util.ArrayList attribList = new java.util.ArrayList();
 
                 
-                    attribList.add(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema-instance","type"));
-                    attribList.add(new javax.xml.namespace.QName("http://chrono.time.java/xsd","IsoChronology"));
-                 if (localCalendarTypeTracker){
-                                      elementList.add(new javax.xml.namespace.QName("http://chrono.time.java/xsd",
-                                                                      "calendarType"));
-                                 
-                                         elementList.add(localCalendarType==null?null:
-                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localCalendarType));
-                                    } if (localIdTracker){
-                                      elementList.add(new javax.xml.namespace.QName("http://chrono.time.java/xsd",
-                                                                      "id"));
-                                 
-                                         elementList.add(localId==null?null:
-                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localId));
-                                    }
 
                 return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(), attribList.toArray());
             
@@ -8149,9 +5420,9 @@ import com.server.CurrencyConversionService;
         * Postcondition: If this object is an element, the reader is positioned at its end element
         *                If this object is a complex type, the reader is positioned at the end element of its outer element
         */
-        public static IsoChronology parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            IsoChronology object =
-                new IsoChronology();
+        public static IOException parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            IOException object =
+                new IOException();
 
             int event;
             java.lang.String nillableValue = null;
@@ -8175,10 +5446,10 @@ import com.server.CurrencyConversionService;
 
                     java.lang.String type = fullTypeName.substring(fullTypeName.indexOf(":")+1);
                     
-                            if (!"IsoChronology".equals(type)){
+                            if (!"IOException".equals(type)){
                                 //find namespace for the prefix
                                 java.lang.String nsUri = reader.getNamespaceContext().getNamespaceURI(nsPrefix);
-                                return (IsoChronology)ExtensionMapper.getTypeObject(
+                                return (IOException)ExtensionMapper.getTypeObject(
                                      nsUri,type,reader);
                               }
                         
@@ -8199,63 +5470,7 @@ import com.server.CurrencyConversionService;
                 
                     
                     reader.next();
-                
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-                                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://chrono.time.java/xsd","calendarType").equals(reader.getName())){
-                                
-                                       nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                       if (!"true".equals(nillableValue) && !"1".equals(nillableValue)){
-                                    
-
-                                    java.lang.String content = reader.getElementText();
-                                    
-                                              object.setCalendarType(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
-                                            
-                                       } else {
-                                           
-                                           
-                                           reader.getElementText(); // throw away text nodes if any.
-                                       }
-                                      
-                                        reader.next();
-                                    
-                              }  // End of if for expected property start element
-                                
-                                    else {
-                                        
-                                    }
-                                
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-                                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://chrono.time.java/xsd","id").equals(reader.getName())){
-                                
-                                       nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                       if (!"true".equals(nillableValue) && !"1".equals(nillableValue)){
-                                    
-
-                                    java.lang.String content = reader.getElementText();
-                                    
-                                              object.setId(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
-                                            
-                                       } else {
-                                           
-                                           
-                                           reader.getElementText(); // throw away text nodes if any.
-                                       }
-                                      
-                                        reader.next();
-                                    
-                              }  // End of if for expected property start element
-                                
-                                    else {
-                                        
-                                    }
-                                  
+                  
                             while (!reader.isStartElement() && !reader.isEndElement())
                                 reader.next();
                             
